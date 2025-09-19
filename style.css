@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+    text-align: center;
+    overflow: hidden; /* Bahar ke elements ko hide karega */
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* "Aap jiyo hazaron saal" text ka style */
+h2 {
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, #ff69b4, #ffb347, #ff69b4); /* Pink, Orange, Pink gradient */
+    -webkit-background-clip: text; /* Text ke andar gradient fill karega */
+    -webkit-text-fill-color: transparent; /* Text ka rang hata kar gradient dikhayega */
+    margin-bottom: 40px;
+    animation: fadeIn 3s ease-in-out, heartbeat 1.5s infinite alternate;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+}
+
+.btn {
+    background: #ff4081;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+    box-shadow: 0px 5px 20px rgba(255, 64, 129, 0.4);
+}
+
+.btn:hover {
+    background: #e91e63;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Naya Animation: Heartbeat Effect */
+@keyframes heartbeat {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Balloons */
+.balloon {
+    width: 60px;
+    height: 80px;
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: float 6s linear infinite;
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background: #555;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-110vh) rotate(20deg); opacity: 0; }
+}
+body {
+    background: linear-gradient(135deg, #f0e68c, #ffebcd); /* Light yellow and peach background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.surprise-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: scale-in 1s ease-out;
+}
+
+@keyframes scale-in {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+    color: #ff6347;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo-box img {
+    max-width: 100%;
+    border-radius: 15px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.special-message {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+    line-height: 1.5;
+}

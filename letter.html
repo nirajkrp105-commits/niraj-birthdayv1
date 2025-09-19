@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Birthday Letter</title>
+  <style>
+    body {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      background:#fff0f5;
+      font-family:Arial, sans-serif;
+      padding:20px;
+    }
+    .letter-box {
+      max-width:600px;
+      background:#fff;
+      border-radius:16px;
+      padding:24px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      line-height:1.6;
+      font-size:18px;
+      white-space:pre-line;
+      border:2px solid #ff7b9c;
+    }
+    .letter-box h3 {
+      text-align:center;
+      margin-bottom:16px;
+      color:#ff4081;
+    }
+    .typing {
+      border-right:3px solid #ff4081;
+      white-space:pre-wrap;
+      overflow:hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="letter-box">
+    <h3>💌 Birthday Letter</h3>
+    <p id="typed" class="typing"></p>
+  </div>
+
+  <script>
+    const text = `Dear Friend,
+
+Happy Birthday to you!  
+आपके साथ बिताया हर पल हमेशा यादगार होता है।  
+आपकी दोस्ती मेरे लिए बहुत खास है और मैं खुद को lucky मानता हूँ कि आप मेरी दोस्त हो।  
+आज आपका दिन है, तो बस दुआ है कि आपकी सारी wishes पूरी हों और हर कदम पर खुशियाँ आपके साथ हों।  और हाँ हम आपको कभी कभी परेशान कर देते है जानबूझकर 😂तो ज्यादा गुस्सा ना होइये गा। हम आपको परेशान भी इसीलिए करते है क्योंकि हम आपको अपना बहुत बहुत बहुत अच्छा दोस्त मानते है।
+और आप हमारे ऊपर इतना जल्दी भरोसा कर ली उसके लिए "thank you". हम आपका ये भरोसा कभी नहीं तोड़ेंगे सच्ची 🥰।
+
+Enjoy your special day 🎂🎉`;
+
+    let i=0;
+    const speed=40; // typing speed (ms)
+    function typeWriter(){
+      if(i < text.length){
+        document.getElementById("typed").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else {
+        document.getElementById("typed").classList.remove("typing");
+      }
+    }
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
